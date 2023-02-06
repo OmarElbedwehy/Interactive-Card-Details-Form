@@ -162,7 +162,6 @@ document.querySelector("button").addEventListener("click", ()=>{
         document.querySelector("#INPUTS").remove()
         document.querySelector(".completd-state").style.display = "block";
         document.querySelector("button").textContent = "Continue";
-        document.querySelector("button").style.fontWeight = "bold";
         document.querySelector("button").style.pointerEvents = "none";
     }else{
         alert("Somthing Went Wrong")
