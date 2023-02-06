@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    z-index: -1;
+}
+
+.card-front {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.card-logo {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+.card-front h1 {
+    position: absolute;
+    color: #fff;
+    top: 55%;
+    left: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-size: 29px;
+}
+
+.card-front .user-card-name {
+    position: absolute;
+    color: #fff;
+    top: 80%;
+    left: 30px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.card-front .card-date {
+    position: absolute;
+    color: #fff;
+    top: 80%;
+    right: 30px;
+}
+
+.card-back {
+    position: relative;
+    right: -100px;
+}
+
+.card-back .back-code {
+    position: absolute;
+    color: hsl(270, 3%, 87%);
+    top: 44%;
+    right: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+form {
+    width: 35%;
+}
+
+form input {
+    border: 1px solid hsl(270, 3%, 87%);
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 7px;
+    margin-top: 7px;
+}
+
+form input:focus {
+    outline: 1px solid #000;
+}
+
+.input {
+    margin-bottom: 25px;
+}
+
+form input::placeholder {
+    color: hsla(279, 6%, 55%, 0.534);
+    letter-spacing: 1px;
+}
+
+.mr-info {
+    display: flex;
+}
+
+.exp-date input {
+    width: 30%;
+    margin-right: 5px;
+}
+
+.cvc input {
+    width: 140px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    margin: auto;
+    display: block;
+    color: #fff;
+    background-color: hsl(278, 68%, 11%);
+    height: 50px;
+    margin-top: 40px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.worn {
+    color: hsl(0, 100%, 66%);
+    font-size: 16px;
+    font-family: sans-serif;
+    margin-top: 5px;
+}
+
+.completd-state {
+    display: none;
+    text-align: center;
+}
+
+.completd-state h1 {
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.completd-state p {
+    color: hsl(279, 6%, 55%);
+    font-size: 17px;
+}
+
+footer{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 20px 35px;
+    background-color: hsl(270, 3%, 87%);
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+footer a{
+    color: #000;
+    text-decoration: none;
+    position: relative;
+}
+
+footer a::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #000;
+    transition: 0.3s;
+}
+
+footer a:hover::after{
+    width: 100%;
+}
+
+@media (max-width: 1115px) {
+    .container{
+        width: 93%;
+    }
+    .card-back .back-code{
+        right: 107px;
+    }
+    .card-back img{
+        width: 85%;
+    }
+    form{
+        width: 40%;
+    }
+    .card-front{
+        right: -25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .overlay {
+        top: -374px;
+        left: 0;
+        transform: rotate(90deg);
+        width: 36%;
+    }
+
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    form {
+        width: 86%;
+        position: relative;
+        bottom: -360px;
+        margin: auto;
+        right: -60px;
+    }
+
+    .card-front {
+        position: absolute;
+        bottom: 24%;
+        z-index: 1;
+        right: -72px;
+    }
+
+    .card-back {
+        position: absolute;
+        right: -94px;
+        bottom: 49%;
+    }
+}

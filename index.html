@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+
+  <main>
+    <div class="overlay"><img src="./images/bg-main-desktop.png" alt=""></div>
+    <div class="container">
+      <div class="cards">
+        <div class="card-front">
+          <img class="card-logo" src="./images/card-logo.svg" alt="">
+          <h1 id="card_num">0000 0000 0000 0000</h1>
+          <p class="user-card-name">Jane Appleseed</p>
+          <p class="card-date">00/00</p>
+          <img src="./images/bg-card-front.png" alt="">
+        </div>
+        <div class="card-back">
+          <p class="back-code">000</p>
+          <img src="./images/bg-card-back.png" alt="">
+        </div>
+      </div>
+      <form action="">
+        <div id="INPUTS">
+          <div class="input">
+            <label>Cardholder Name</label><br>
+            <input type="text" id="name" placeholder="e.g. Jane Appleseed"><br>
+            <p id="name_worn" class="worn"></p>
+          </div>
+          <div class="input">
+            <label>Card Number</label><br>
+            <input type="text" id="card-num" placeholder="e.g. 1234 5678 9123 0000" maxlength="19"><br>
+            <p id="card_num_worn" class="worn"></p>
+          </div>
+          <div class="mr-info">
+            <div class="exp-date">
+              <label>Exp. Date (MM/YY)</label><br>
+              <input id="month_input" type="number" placeholder="MM" maxlength="2">
+              <input id="year_input" type="number" placeholder="YY" maxlength="2">
+              <p id="exp_worn" class="worn"></p>
+            </div>
+            <div class="cvc">
+              <label>CVC</label><br>
+              <input type="number" id="cvc" placeholder="e.g. 123">
+              <p id="cvc_worn" class="worn"></p>
+            </div>
+          </div>
+        </div>
+        <div class="completd-state">
+          <img src="./images/icon-complete.svg" alt="">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    <p>Developed By <a href="https://github.com/OmarElbedwehy">Omar Elbedwehy</a></p>
+  </footer>
+  <script src="./main.js"></script>
+</body>
+
+</html>
